@@ -39,6 +39,6 @@ def loginWeibo(username, password):
     #return cookies
     #driver.close()
 if __name__ == '__main__':
-    username = '13839860292'             # 输入微博账号
-    password = 'qw0.00+++'             # 输入密码
+    username = '*********'             # 输入微博账号
+    password = '*********'             # 输入密码
     loginWeibo(username, password)
