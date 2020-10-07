@@ -16,14 +16,14 @@ from werobot.replies import ArticlesReply, Article, ImageReply, TextReply, Music
 from twilio.rest import Client
 from bs4 import BeautifulSoup
 
-robot=werobot.WeRoBot(token='l78zde')
+robot=werobot.WeRoBot(token='******')
 def send_phone_mes(body):
     account_sid = 'AC7a80eff4317d2f1e47b2085d0fdfb0ee'
-    auth_token = '61fa26fb317bc8e268a7dc62cd8ff337'
+    auth_token = '***********************************'
     client = Client(account_sid,auth_token)
     message = client.messages.create(
-        to = '+8613839860292',
-        from_ = '+12563611223',
+        to = '+8613********92',
+        from_ = '+12******23',
         body = body)
 # 订阅后的回复
 @robot.subscribe
@@ -85,7 +85,7 @@ def blog(message):
 # 用户发送图片
 @robot.image
 def img(message):
-    host = 'https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id=GWD8TG6n4E2ZnVlbWR1GtGuC&client_secret=zh0iRspTezH6F5TqpXF5Ap0y7KKv43Xt'
+    host = 'https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id=**************************&client_secret=***************************'
     response = requests.get(host,timeout=2)
     if response:
         rejson = response.json()
@@ -162,7 +162,7 @@ def music(message):
 '''
 # 调用智能回复接口
 def get_response(msg_text_bd):
-    host = 'https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id=lfDQ5SodDH4RCA5g9gwcXjHn&client_secret=Lpo05CHCSG7VWG0dPCPZes5UXhBLvtUj'
+    host = 'https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id=*************************&client_secret=******************************'
     response = requests.get(host)    
     if response:
         rejson = response.json()    
